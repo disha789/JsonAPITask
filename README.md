@@ -1,5 +1,3 @@
-
-https://github.com/disha789/JsonAPITask/assets/49581479/ac64cf98-58a8-46e7-b2a4-6b1ef94a3a6b
 # API Handling with Generics and MVVM Architecture
 
 ## Project Description
@@ -14,6 +12,7 @@ This project demonstrates the use of generics in API handling and MVVM architect
 - **UI Components:** Uses TableView cells to present data in a structured format.
 
 ## Demonstration
+https://github.com/disha789/JsonAPITask/assets/49581479/ac64cf98-58a8-46e7-b2a4-6b1ef94a3a6b
 https://github.com/disha789/JsonAPITask/assets/49581479/55625e4d-97c5-44fb-a3c2-b6ed16b470e1
 
 ## Table of Contents
