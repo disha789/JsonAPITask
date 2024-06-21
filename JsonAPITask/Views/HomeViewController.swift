@@ -11,6 +11,19 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpBg()
+        
+        func setUpBg(){
+            let backgroundImageView = UIImageView(frame: self.view.bounds)
+            backgroundImageView.image = UIImage(named: "Image.png")
+            //backgroundImageView.contentMode = .scaleAspectFit
+            backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
+            self.view.addSubview(backgroundImageView)
+            self.view.sendSubviewToBack(backgroundImageView)
+        }
     }
 }
+
+
 
