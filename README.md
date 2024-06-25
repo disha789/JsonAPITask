@@ -11,6 +11,9 @@ This project demonstrates the use of generics in API handling and MVVM architect
 - **Different Data Models:** Each API call handles different types of data models.
 - **UI Components:** Uses TableView cells to present data in a structured format.
 
+## Demonstration
+https://github.com/disha789/JsonAPITask/assets/49581479/ac64cf98-58a8-46e7-b2a4-6b1ef94a3a6b
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
