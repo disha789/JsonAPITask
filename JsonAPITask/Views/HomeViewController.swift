@@ -16,7 +16,6 @@ class HomeViewController: UIViewController {
         func setUpBg(){
             let backgroundImageView = UIImageView(frame: self.view.bounds)
             backgroundImageView.image = UIImage(named: "Image.png")
-            //backgroundImageView.contentMode = .scaleAspectFit
             backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
             self.view.addSubview(backgroundImageView)

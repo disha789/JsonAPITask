@@ -15,7 +15,7 @@ class APIHandler {
     func fetch<T: Decodable>(model: T.Type, URLString: String, completion: ((T) -> Void)?) {
         guard let url = URL(string: URLString) else {
             print("\(ServerErrors.invalidServerUrl.rawValue)")
-            return
+            return 
         }
         
         let request = URLRequest(url: url)

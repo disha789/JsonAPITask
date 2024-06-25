@@ -10,27 +10,63 @@ import XCTest
 
 final class JsonAPITaskTests: XCTestCase {
 
+    var objUserInfoVM: UserInfoViewModel?
+    var objAPIHandler: APIHandler?
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+      objUserInfoVM = UserInfoViewModel()
+      objAPIHandler = APIHandler.shared
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+       objUserInfoVM = nil
+       objAPIHandler = nil
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testGetUserCountForUserInfo(){
+        let result = objUserInfoVM?.getUserCount()
+        XCTAssertEqual(result, 0)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testGetUserForUserInfoWhenNoUsers() {
+        
+        let resultNilUsers = objUserInfoVM?.getUserFor(row: 0)
+        XCTAssertNil(resultNilUsers)
+    }
+    
+    func testGetUserForUserInfoWithMockData() {
+        // mock data
+        let GeoInfo = GeoInfo(lat: "", lng: "")
+        let AddressInfo = AddressInfo(street: "", suite: "", city: "", zipcode: "", geo: GeoInfo)
+        let CompanyInfo = CompanyInfo(name: "", catchPhrase: "", bs: "")
+        objUserInfoVM?.users = [UserInfo(id: 1, name: "", username: "", email: "", phone: "", website: "", address: AddressInfo, company: CompanyInfo)]
+        
+        let resultUser = objUserInfoVM?.getUserFor(row: 0)
+        XCTAssertNotNil(resultUser)
+    }
+    
+    func testFetchForAPIHandler() {
+        //Empty URL
+        objAPIHandler?.fetch(model: [UserInfo].self, URLString: "", completion: { users in
+        XCTAssertNil(users)
+        })
+        
+        //Invalid URL
+        objAPIHandler?.fetch(model: [UserInfo].self, URLString: "invalid_url", completion: { users in
+        XCTAssertNil(users)
+        })
+        
+        //Valid URL
+        objAPIHandler?.fetch(model: [UserInfo].self, URLString: "\(Constants.userInfoServerURL.rawValue)", completion: { users in
+        XCTAssertNil(users)
+        })
+    }
+    
+    func testVMFetchUserWithOneUser(){
+        objUserInfoVM = MockUserInfoViewModel()
+        objUserInfoVM?.fetchUsers()
+        XCTAssertEqual(objUserInfoVM?.users.count, 1)
+        XCTAssertEqual(objUserInfoVM?.users.first?.id, 1)
     }
 
 }

@@ -330,10 +330,10 @@
             </objects>
             <point key="canvasLocation" x="-682" y="675"/>
         </scene>
-        <!--PersonViewController-->
+        <!--SingleUserViewController-->
         <scene sceneID="ALW-Ne-fVO">
             <objects>
-                <viewController storyboardIdentifier="PersonViewController" title="PersonViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gfI-2Q-mrH" customClass="PersonViewController" customModule="JsonAPITask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SingleUserViewController" title="SingleUserViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gfI-2Q-mrH" customClass="SingleUserViewController" customModule="JsonAPITask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="clP-tk-qj9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

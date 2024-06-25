@@ -38,8 +38,9 @@ extension UserInfoViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifier.userInfoCell.rawValue, for: indexPath) as! UserInfoTableViewCell
-        let obj = viewModel.getUserFor(row: indexPath.row)
-        cell.setUp(userInfo: obj)
+        if let obj = viewModel.getUserFor(row: indexPath.row){
+            cell.setUp(userInfo: obj)
+        }
         return cell
     }
 }

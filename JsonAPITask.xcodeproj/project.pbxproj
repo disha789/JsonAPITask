@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18015AC82C2B0AB700267032 /* MockUserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18015AC72C2B0AB700267032 /* MockUserInfoViewModel.swift */; };
 		1853B2692C21D220007EE8C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853B2682C21D220007EE8C7 /* AppDelegate.swift */; };
 		1853B26B2C21D220007EE8C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853B26A2C21D220007EE8C7 /* SceneDelegate.swift */; };
 		1853B26D2C21D220007EE8C7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853B26C2C21D220007EE8C7 /* HomeViewController.swift */; };
@@ -38,10 +39,6 @@
 		1853B2CA2C237706007EE8C7 /* MealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853B2C92C237706007EE8C7 /* MealsViewModel.swift */; };
 		1853B2CD2C237729007EE8C7 /* MealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853B2CC2C237729007EE8C7 /* MealsViewController.swift */; };
 		1853B2CF2C23773A007EE8C7 /* MealsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853B2CE2C23773A007EE8C7 /* MealsTableViewCell.swift */; };
-		1858F6D12C24807400B3415E /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858F6D02C24807400B3415E /* PersonViewController.swift */; };
-		1858F6D32C24813300B3415E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858F6D22C24813300B3415E /* APIClient.swift */; };
-		1858F6D52C24815400B3415E /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858F6D42C24815400B3415E /* PersonViewModel.swift */; };
-		1858F6D92C24944700B3415E /* APIClientGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858F6D82C24944700B3415E /* APIClientGeneric.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18015AC72C2B0AB700267032 /* MockUserInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserInfoViewModel.swift; sourceTree = "<group>"; };
 		1853B2652C21D220007EE8C7 /* JsonAPITask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsonAPITask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1853B2682C21D220007EE8C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1853B26A2C21D220007EE8C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,10 +95,6 @@
 		1853B2C92C237706007EE8C7 /* MealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewModel.swift; sourceTree = "<group>"; };
 		1853B2CC2C237729007EE8C7 /* MealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewController.swift; sourceTree = "<group>"; };
 		1853B2CE2C23773A007EE8C7 /* MealsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsTableViewCell.swift; sourceTree = "<group>"; };
-		1858F6D02C24807400B3415E /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
-		1858F6D22C24813300B3415E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		1858F6D42C24815400B3415E /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
-		1858F6D82C24944700B3415E /* APIClientGeneric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientGeneric.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +122,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18015AC42C2B072100267032 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				18015AC72C2B0AB700267032 /* MockUserInfoViewModel.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		1853B25C2C21D220007EE8C7 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +153,7 @@
 		1853B2672C21D220007EE8C7 /* JsonAPITask */ = {
 			isa = PBXGroup;
 			children = (
+				18015AC42C2B072100267032 /* Mock */,
 				1853B29C2C21D445007EE8C7 /* Commons */,
 				1853B29B2C21D42A007EE8C7 /* Model */,
 				1853B29A2C21D3C0007EE8C7 /* NetworkManager */,
@@ -200,7 +203,6 @@
 			children = (
 				1853B2A42C21E644007EE8C7 /* UserInfoViewModel.swift */,
 				1853B2AF2C21FD27007EE8C7 /* SingleUserViewModel.swift */,
-				1858F6D42C24815400B3415E /* PersonViewModel.swift */,
 				1853B2B52C23223D007EE8C7 /* MovieViewModel.swift */,
 				1853B2BE2C2358C8007EE8C7 /* NewsViewModel.swift */,
 				1853B2C92C237706007EE8C7 /* MealsViewModel.swift */,
@@ -212,8 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				1853B29E2C21D4B0007EE8C7 /* APIHandler.swift */,
-				1858F6D22C24813300B3415E /* APIClient.swift */,
-				1858F6D82C24944700B3415E /* APIClientGeneric.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -260,7 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				1853B2AD2C21FD09007EE8C7 /* SingleUserViewController.swift */,
-				1858F6CF2C24804100B3415E /* Using Async-Await */,
 			);
 			path = SingleUser;
 			sourceTree = "<group>";
@@ -291,14 +290,6 @@
 				1853B2CE2C23773A007EE8C7 /* MealsTableViewCell.swift */,
 			);
 			path = Meals;
-			sourceTree = "<group>";
-		};
-		1858F6CF2C24804100B3415E /* Using Async-Await */ = {
-			isa = PBXGroup;
-			children = (
-				1858F6D02C24807400B3415E /* PersonViewController.swift */,
-			);
-			path = "Using Async-Await";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,7 +424,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1853B2A32C21E18B007EE8C7 /* UserDataModel.swift in Sources */,
-				1858F6D12C24807400B3415E /* PersonViewController.swift in Sources */,
 				1853B2BF2C2358C8007EE8C7 /* NewsViewModel.swift in Sources */,
 				1853B2B02C21FD27007EE8C7 /* SingleUserViewModel.swift in Sources */,
 				1853B2C42C23591B007EE8C7 /* NewsViewController.swift in Sources */,
@@ -450,7 +440,6 @@
 				1853B2CD2C237729007EE8C7 /* MealsViewController.swift in Sources */,
 				1853B2BD2C2349AD007EE8C7 /* NewsDataModel.swift in Sources */,
 				1853B2B22C21FD3C007EE8C7 /* SingleUserDataModel.swift in Sources */,
-				1858F6D92C24944700B3415E /* APIClientGeneric.swift in Sources */,
 				1853B2CA2C237706007EE8C7 /* MealsViewModel.swift in Sources */,
 				1853B2AE2C21FD09007EE8C7 /* SingleUserViewController.swift in Sources */,
 				1853B2C82C2376F1007EE8C7 /* MealDataModel.swift in Sources */,
@@ -459,8 +448,7 @@
 				1853B2692C21D220007EE8C7 /* AppDelegate.swift in Sources */,
 				1853B26B2C21D220007EE8C7 /* SceneDelegate.swift in Sources */,
 				1853B2C22C235902007EE8C7 /* NewsTableViewCell.swift in Sources */,
-				1858F6D32C24813300B3415E /* APIClient.swift in Sources */,
-				1858F6D52C24815400B3415E /* PersonViewModel.swift in Sources */,
+				18015AC82C2B0AB700267032 /* MockUserInfoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

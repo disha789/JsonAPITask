@@ -24,7 +24,10 @@ class UserInfoViewModel {
         return users.count
     }
     
-    func getUserFor(row: Int) -> UserInfo {
-        return users[row]
+    func getUserFor(row: Int) -> UserInfo? {
+        if row < users.count {
+            return users[row]
+        }
+        return nil
     }
 }
